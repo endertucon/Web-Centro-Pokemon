@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="imagenes/_logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+    <title>Centro Pokemon - Noticias Pokemon</title>
+
+    <script src="/Jquery/jquery-1.6.3.min.js"></script>
+    <script>
+        $ (function(){
+          $ ("#Logo_pagina, iframe").hide().fadeIn(3000);
+        });
+    </script>
+
+  </head>
+
+  <body class="Body">
+    <!--------------------- Comienza el Header --------------------->
+    <header class="Header">
+      <div class="color_fondo">
+        <div class="contenedor">
+          <section id="Navegador">
+            <figure>
+              <img id="Logo_pagina" src="imagenes/_xnorlax.png" alt="Logo_pagina" />
+            </figure>
+            <div class="Formulario">
+              <!--------------------- Formulario -------------------------->
+              <form action="codigo.php" method="get">
+                <input type="text" id="s" name="busqueda" placeholder="Buscar..." required/>
+                <button type="submit">
+                  <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+              </form>
+              <!----------------------------------------------------------->
+            </div>
+          </section>
+
+          <section id="contenedor_menu">
+            <nav class="navbar">
+              <ul class="menu">
+                <li class="menu_items">
+                  <a class="link_item" href="#">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>NOTICIAS</span>
+                    <i class="caret fa fa-caret-down"></i>
+                  </a>
+                </li>
+                <li class="menu_items">
+                    <a class="link_item" href="#">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <span>ARTICULOS</span>
+                        <i class="caret fa fa-caret-down"></i>
+                    </a>
+<!-- submenu -->    <div class="box_submenu">
+                        <h2>ULTIMOS ARTICULOS</h2>
+                        <ul class="submenu">
+                            <li>
+                                <a href="">
+                                <img src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2023/10/detective-pikachu-el-regreso-portada.jpg?ssl=1&resize=300%2C170&zoom=2" alt="">
+                                <p>Apartado #1: Pokemon GO</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2020/09/pokemon-go-trailer-presentacion.jpg?ssl=1&resize=300%2C170&zoom=2" alt="">
+                                <p>Apartado #2: Pokemon GO</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2025/06/hora-destacada-junio-2025-pokemon-go.jpg?ssl=1&resize=300%2C170&zoom=2" alt="">
+                                <p>Apartado #3: Pokemon GO</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                <img src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2017/09/KgPCPfMh.jpeg?ssl=1&resize=300%2C170&zoom=2" alt="">
+                                <p>Apartado #4: Pokemon GO</p>
+                                </a>
+                            </li>
+                        </ul>
+<!-- submenu -->    </div>
+                </li>
+                <li class="menu_items">
+                  <a class="link_item" href="#Guias_recientes">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>JUEGOS Y GUIAS</span>
+                    <i class="caret fa fa-caret-down"></i>
+                  </a>
+                </li>
+                <li class="menu_items">
+                  <a class="link_item" href="#">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>HERRAMIENTAS</span>
+                    <i class="caret fa fa-caret-down"></i>
+                  </a>
+                </li>
+                <li class="menu_items">
+                  <a class="link_item" href="#">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>COMUNIDAD</span>
+                    <i class="caret fa fa-caret-down"></i>
+                  </a>
+                </li>
+                <li class="menu_items">
+                  <a class="link_item" href="#">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>SECCIONES</span>
+                    <i class="caret fa fa-caret-down"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      </div>
+
+      <input type="checkbox" id="btn_menu">
+      <label for="btn_menu"><i class="fa-solid fa-bars"></i></label>
+      <div class="color_fondo2">
+        <div class="contenedor">
+          <section class="banner">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/trvc25Ux2ME?si=bUdxTUyTHIPMK7L2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </section>
+          <section></section>
+        </div>
+      </div>
+    </header>
+
+    <!---------------------- Comienza el Main ---------------------->
+    <div class="contenedor-main-aside">
+      <main class="Main">
+          <header id="main_header">
+              <h1>Noticias de Pokémon</h1>
+              <div class="contenedor_lista">
+                <h2>ÚLTIMAS NOVEDADES</h2>
+                <ul class="main_lista">
+                  <li class="item_lista">Todo</li>
+                  <li class="item_lista">Noticias</li>
+                  <li class="item_lista">Articulos</li>
+                  <li class="item_lista">Guias</li>
+                  <li class="item_lista">Eventos</li>
+                </ul>
+              </div>
+          </header>
+          <section id="main_contenido">
+            <article class="articulos">
+              <figure class="caja_imagen">
+                <img
+                  src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2025/02/pokemon-champions.jpg?ssl=1&resize=300%2C170&zoom=2"
+                  alt="imagen1"
+                />
+              </figure>
+              <div>
+                <h3 class="titulo_articulo">
+                  FIN DE SEMANA DE COMBATES MAX DE LATIAS Y LATIOS
+                </h3>
+                <p>
+                  <span>22/09/2020 -</span>Sumérgete en una trama intrigante con
+                  Detective Pikachu: El regreso. ¿Estás listo para embarcarte en
+                  esta nueva aventura?
+                </p>
+              </div>
+            </article>
+            <article class="articulos">
+              <figure class="caja_imagen">
+                <img
+                  src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2025/07/dia-de-combates-max-de-butterfree-gigamax-pokemon-go.jpg?ssl=1&resize=300%2C170&zoom=2"
+                  alt="imagen2"
+                />
+              </figure>
+              <div>
+                <h3 class="titulo_articulo">
+                  TODAS LAS CARTAS PRINCIPALES DE LA EXPANSION MEGA
+                </h3>
+                <p>
+                  Comparamos lo que nos prometieron en el primer tráiler de
+                  Pokémon GO con lo que realmente obtuvimos.
+                </p>
+              </div>
+            </article>
+            <article class="articulos">
+              <figure class="caja_imagen">
+                <img
+                  src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2025/07/leyendas-pokemon-za-keyart-julio-2025.jpg?ssl=1&resize=300%2C170&zoom=2"
+                  alt="imagen3"
+                />
+              </figure>
+              <div>
+                <h3 class="titulo_articulo">
+                  NIANTIC REVELA LOS EVENTOS Y ACTIVIDADES DE AGOSTO 2025
+                </h3>
+                <p>
+                  Les traemos una gran cantidad de nueva información de Pokémon
+                  Let's Go respondiendo sus dudas sobre este juego y el futuro de
+                  Pokémon.
+                </p>
+              </div>
+            </article>
+            <article class="articulos">
+              <figure class="caja_imagen">
+                <img
+                  src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2025/07/evento-ultrabonus-acero-y-escamas-pokemon-go.jpg?ssl=1&resize=300%2C170&zoom=2"
+                  alt="imagen4"
+                />
+              </figure>
+              <div>
+                <h3 class="titulo_articulo">
+                  SABER MARINO Y CELESTE DE HO-OH Y LUGIA LLEGARA A FIN
+                </h3>
+                <p>
+                  ¿Sabías que durante un tiempo estuvo planeado lanzar un juego
+                  principal de Pokémon para Nintendo 64? Te contamos la historia.
+                </p>
+              </div>
+            </article>
+            <article class="articulos">
+              <figure class="caja_imagen">
+                <img
+                  src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2025/07/actualizacion-de-agosto-2025-pokemon-go.jpg?ssl=1&resize=300%2C170&zoom=2"
+                  alt="imagen5"
+                />
+              </figure>
+              <div>
+                <h3 class="titulo_articulo">
+                  LEYENDAS POKEMON: Z-A REVELA A MEGA DRAGONITE, DESCONTROLADA
+                </h3>
+                <p>
+                  ¿Sabías que durante un tiempo estuvo planeado lanzar un juego
+                  principal de Pokémon para Nintendo 64? Te contamos la historia.
+                </p>
+              </div>
+            </article>
+            <article class="articulos">
+              <figure class="caja_imagen">
+                <img
+                  src="https://i0.wp.com/www.centropkmn.com/wp-content/uploads/2023/10/detective-pikachu-el-regreso-portada.jpg?ssl=1&resize=300%2C170&zoom=2"
+                  alt="imagen6"
+                />
+              </figure>
+              <div>
+                <h3 class="titulo_articulo">
+                  RECOMPENSAS DEL EVENTO ULTRABONUS ACERO Y ESCAMAS
+                </h3>
+                <p>
+                  ¿Sabías que durante un tiempo estuvo planeado lanzar un juego
+                  principal de Pokémon para Nintendo 64? Te contamos la historia.
+                </p>
+              </div>
+            </article>
+          </section>
+      </main>
+
+      <aside class="Aside">  
+
+      </aside>
+
+
+    </div>
+
+    <!------------------- Comienza Bloques Guias ---------------------->
+
+    <div class="bloque_guias" id="Guias_recientes">
+      <div class="contenedor">
+        <h1>Guías recientes</h1>
+        <div class="contenedor-bloques">
+          <div class="bloque">
+            <div class="contenido">
+              <p>
+                Recompensas de las misiones de campo de Pokemon GO agosto 2025
+              </p>
+              <span><em>Parte de la guia de Pokemon GO</em></span>
+            </div>
+          </div>
+          <div class="bloque">
+            <div class="contenido">
+              <p>
+                Recompensas de las misiones de campo de Pokemon GO agosto 2025
+              </p>
+              <span><em>Parte de la guia de Pokemon GO</em></span>
+            </div>
+          </div>
+          <div class="bloque">
+            <div class="contenido">
+              <p>
+                Recompensas de las misiones de campo de Pokemon GO agosto 2025
+              </p>
+              <span><em>Parte de la guia de Pokemon GO</em></span>
+            </div>
+          </div>
+          <div class="bloque">
+            <div class="contenido">
+              <p>
+                Recompensas de las misiones de campo de Pokemon GO agosto 2025
+              </p>
+              <span><em>Parte de la guia de Pokemon GO</em></span>
+            </div>
+          </div>
+          <div class="bloque">
+            <div class="contenido">
+              <p>
+                Recompensas de las misiones de campo de Pokemon GO agosto 2025
+              </p>
+              <span><em>Parte de la guia de Pokemon GO</em></span>
+            </div>
+          </div>
+          <div class="bloque">
+            <div class="contenido">
+              <p>
+                Recompensas de las misiones de campo de Pokemon GO agosto 2025
+              </p>
+              <span><em>Parte de la guia de Pokemon GO</em></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------- Comienza el Footer --------------------->
+
+    <footer class="Footer">
+      <div class="contenido_footer">
+        <div class="contenedor">
+          <section id="redes_sociales">
+            <div class="iconos">
+              <figure>
+                <img
+                  src="https://www.centropkmn.com/wp-content/themes/nuevocp/images/cplogo-hdpi.png"
+                  alt="Logo pie de pagina"
+                />
+              </figure>
+              <h2>SIGUENOS</h2>
+              <ul>
+                <li class="menu_item">
+                  <a href="" class="link_redes">
+                    <img src="/assets/_facebook.svg" alt="" />
+                  </a>
+                </li>
+                <li class="menu_item">
+                  <a href="" class="link_redes">
+                    <img src="/assets/_twitter.svg" alt="" />
+                  </a>
+                </li>
+                <li class="menu_item">
+                  <a href="" class="link_redes">
+                    <img src="/assets/_youtube.svg" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p>
+              En Centro Pokémon podrás encontrar la más reciente información y
+              noticias sobre Pokémon, así como guías, eventos, descargas, foros
+              y mucho más. Pokémon y el resto de nombres relacionados son
+              propiedad de Nintendo, Creatures Inc y Game Freak 1996-2025
+            </p>
+            <div class="gifts">
+              <a href="https://www.pokeyplay.com/">
+                <img
+                  src="https://www.centropkmn.com/images/afiliados/poke-play.gif"
+                  alt=""
+                />
+              </a>
+              <a href="">
+                <img src="" alt="" />
+              </a>
+              <a href="">
+                <img src="" alt="" />
+              </a>
+              <a href="">
+                <img src="" alt="" />
+              </a>
+              <a href="">
+                <img src="" alt="" />
+              </a>
+              <a href="">
+                <img src="" alt="" />
+              </a>
+            </div>
+          </section>
+          <section class="enlaces">
+            <h2>Sitio</h2>
+            <ul>
+              <li>Acerca de</li>
+              <li>Foros</li>
+              <li>Grupo de facebook</li>
+              <li>chat en discord</li>
+              <li>Equipo</li>
+              <li>Aviso legal</li>
+              <li>Contacto</li>
+              <li>DMCA</li>
+            </ul>
+          </section>
+          <section class="enlaces">
+            <h2>Noticias</h2>
+            <ul>
+              <li>Videojuegos</li>
+              <li>Anime</li>
+              <li>TCG</li>
+              <li>Eventos</li>
+              <li>Articulos</li>
+            </ul>
+          </section>
+          <section class="enlaces">
+            <h2>Guias</h2>
+            <ul>
+              <li>Pokemon Escarlata y Purpura</li>
+              <li>Leyendas Pokemon: Arceus</li>
+              <li>Pokemon espada y escudo</li>
+              <li>Pokemon Let's Go</li>
+              <li>Pokemon ultra sol y luna</li>
+              <li>Pokemon sol y luna</li>
+              <li>Rubi Omega y Zafiro Alfa</li>
+              <li>X y Y</li>
+              <li>Trucos Pokemon Go</li>
+              <li>Trucos Pokemon Esmeralda</li>
+              <li>Trucos Pokemon Rojo Fuego y Verde hoja</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="pie_footer">
+        <div class="contenedor">
+          <p>
+            Centro Pokémon 2005-2025. Todos los derechos reservados del
+            contenido original.
+          </p>
+          <a href="">
+            <img src="//www.centropkmn.com/wp-content/themes/nuevocp/images/cri.png" style="vertical-align: middle;margin-right: 0px;">
+            <img src="//www.centropkmn.com/wp-content/themes/nuevocp/images/arg.png" style="margin-left: 5px; vertical-align: middle;margin-right: 7px;">
+            <span>Creado en Costa Rica y Argentina</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
