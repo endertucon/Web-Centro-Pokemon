@@ -23,7 +23,7 @@
     <script src="/Jquery/jquery-1.6.3.min.js"></script>
     <script>
         $ (function(){
-          $ ("#Logo_pagina, iframe").hide().fadeIn(3000);
+          $ ("#Logo_pagina, iframe").hide().fadeIn(1000);
         });
     </script>
 
@@ -459,5 +459,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Selecciona el elemento del menú
+            var menu = document.querySelector('.navbar');
+
+            if (menu) {
+                // 2. Inicia un temporizador que espera 3000 milisegundos (3 segundos)
+                setTimeout(function() {
+                    // 3. Esta función se ejecuta DESPUÉS del retardo
+                    menu.style.visibility = 'visible'; // Asegúrate de usar 'block', 'flex', o el valor de 'display' original.
+                }, 1500); // <-- El tiempo de retardo en milisegundos
+            }
+        });
+    </script>
+
   </body>
+
 </html>
