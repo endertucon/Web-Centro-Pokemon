@@ -56,14 +56,17 @@ html {scroll-behavior: smooth;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
-                        gap: 7rem;
+                        gap: 4rem;
 
+                & .bloque_vacio {display: none;}
 
                 & figure {margin-left: 1rem;
-                          margin-bottom: -2rem;
+                          margin-bottom: -1rem;
 
-                    & #Logo_pagina {width: 9rem;
-                                    }
+                    & #Logo_pagina {width: 12rem;
+                                    margin-left: 1rem;
+
+                    }
                 }
 
 /* checked */   & #btn_search {display: none;} 
@@ -373,6 +376,7 @@ html {scroll-behavior: smooth;
                               
 
                 & .iconos {display: flex;
+                            flex-wrap: wrap;
                            gap: 1rem;
 
                     & figure {
@@ -386,16 +390,17 @@ html {scroll-behavior: smooth;
                     & ul {list-style-type: none;
                           display: flex;
                           gap: 1rem;
+                          height: 2rem;
 
                         & .menu_item {width: 3rem;
-                                    height: 2rem;
                                     text-align: center;
                                     box-shadow: 2px 2px 6px 0.5px var(--c_black);
                         
-                            & .link_redes {display: block;
-                                            height: 100%;
-                                & img {width: 1.2rem;
-                                        vertical-align: middle;}
+                            & .link_redes {display: flex;
+                                            justify-content: center;
+                                            height: 2rem;
+                                            
+                                & svg {width: 1.3rem;}
                             }
                         }
 
@@ -409,6 +414,12 @@ html {scroll-behavior: smooth;
 
                 & p {font-size: 0.75rem;
                     margin-block: 1rem;}
+
+                & .gifts {display: flex;
+                          gap: 0.5rem;
+
+                
+                }
 
             }
 
@@ -435,6 +446,7 @@ html {scroll-behavior: smooth;
                       display: flex;
                       justify-content: space-between;
                       align-items: center;
+                      text-align: center;
                       
                     
                     & a {color: rgba(255, 255, 255, 0.8);
@@ -457,13 +469,17 @@ html {scroll-behavior: smooth;
             & .contenedor {
                         margin-inline: 0;
                 
-                & #Navegador {justify-content: flex-end;
-                              gap: 40%;
+                & #Navegador {justify-content: space-between;
                               height: 48px;
+
+                    & .bloque_vacio {display: block;
+                                    width: 3rem;
+                                    height: 45px;}
 
                     & figure {margin-top: -1rem;
 
-                        & #Logo_pagina {width: 4rem}
+                        & #Logo_pagina {width: 8rem;
+                                        margin-bottom: -1.5rem;}
                     }
 
 /*checked           & #btn_search {display: none;}  */ 
@@ -698,13 +714,17 @@ html {scroll-behavior: smooth;
             & .contenedor {
                         margin-inline: 0;
                 
-                & #Navegador {justify-content: flex-end;
-                              gap: 35%;
+                & #Navegador {justify-content: space-between;
                               height: 100%;
+
+                    & .bloque_vacio {display: block;
+                                    width: 3rem;
+                                    height: 45px;}
 
                     & figure {margin-top: -1rem;
 
-                        & #Logo_pagina {width: 4rem}
+                        & #Logo_pagina {width: 8rem;
+                                        margin-bottom: -1.5rem;}
                     }
 
 /*checked           & #btn_search {display: none;}  */ 
